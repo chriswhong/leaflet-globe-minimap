@@ -26,10 +26,14 @@
     "topojson-client": "^3.0.0"
   },
   "devDependencies": {
-    "uglify-js": "^2.8.0"
+    "babel-core": "^6.24.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "webpack": "^2.4.0"
   },
   "scripts": {
-    "build:js": "uglifyjs --output dist/Control.GlobeMiniMap.min.js src/Control.GlobeMiniMap.js",
-    "build": "npm run build:js"
+    "build": "npm run build:js",
+    "build:js": "webpack --progress",
+    "build:js:watch": "webpack --progress --watch"
   }
 }
